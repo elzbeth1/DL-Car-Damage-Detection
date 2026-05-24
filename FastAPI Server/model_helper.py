@@ -44,7 +44,7 @@ def predict(image_path):
 
     if not trained_model: #to avoid loading the model multiple times
         trained_model=CarClassifierResNet()
-        trained_model.load_state_dict(torch.load("Model/saved_model.pth",map_location=torch.device('cpu')))  #Loading the saved model parameters to trained model variable
+        trained_model.load_state_dict(torch.load("../Model/saved_model.pth",map_location=torch.device('cpu')))  #Loading the saved model parameters to trained model variable
         trained_model.eval()
 
     with torch.no_grad():
