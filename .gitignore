@@ -1,6 +1,9 @@
 # Python cache
 __pycache__/
 .ipynb_checkpoints/
+.idea/
+.devcontainer/
+*.pyc
 
 # Dataset
 dataset/
