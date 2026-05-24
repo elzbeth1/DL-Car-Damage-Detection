@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+.ipynb_checkpoints/
+
+# Dataset
+dataset/
+
+# Temporary files
+temp_file.jpg
+
+# Environment
+venv/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
