@@ -1,40 +1,30 @@
-# Car Damage Classification using Deep Learning
+# 🚗 Car Damage Classification using Deep Learning
 
-A deep learning-based image classification system for detecting and classifying car damage using Convolutional Neural Networks (CNNs) and transfer learning techniques such as ResNet and EfficientNet.
+A deep learning-based image classification system for detecting and classifying car damage using CNNs and transfer learning models such as ResNet and EfficientNet.
 
 The project explores multiple deep learning approaches, compares their performance, and deploys the final trained model using Streamlit and FastAPI.
 
 ---
 
-## Project Overview
+## 🌐 Live Demo
 
-This project focuses on classifying different types of car damage from images. Multiple deep learning architectures were implemented and evaluated, including:
-
-- Custom CNN architectures
-- CNN with regularization
-- Transfer learning using pretrained ImageNet models
-- Hyperparameter tuning using Optuna
-
-The final model was deployed using:
-
-- Streamlit (Frontend)
-- FastAPI (Backend API)
+🔗 Streamlit App: **[Add Streamlit Link Here]**
 
 ---
 
-## Features
+## 📌 Features
 
 - Image preprocessing and augmentation
 - Custom CNN implementation using PyTorch
-- Transfer learning with pretrained models
+- Transfer learning with ResNet and EfficientNet
 - Hyperparameter tuning using Optuna
-- Model evaluation using confusion matrix and classification metrics
-- Streamlit web application for real-time predictions
-- FastAPI backend for serving predictions
+- Model evaluation using confusion matrix and classification report
+- Streamlit frontend for real-time predictions
+- FastAPI backend for model inference
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 ### Deep Learning & ML
 - PyTorch
@@ -52,11 +42,11 @@ The final model was deployed using:
 
 ---
 
-## Dataset
+## 📂 Dataset
 
 The dataset contains images of damaged and non-damaged cars. Since the dataset size was limited, data augmentation techniques were applied to improve model generalization.
 
-### Data Augmentation Techniques
+### Data Augmentation
 - Horizontal flipping
 - Rotation
 - Zooming
@@ -69,123 +59,52 @@ The dataset contains images of damaged and non-damaged cars. Since the dataset s
 
 ---
 
-## Models Implemented
+## 🤖 Models Implemented
 
 | Model | Description |
 |---|---|
 | Baseline CNN | Basic convolutional neural network |
-| CNN + Regularization | Added dropout and regularization techniques |
+| CNN + Regularization | Added dropout and regularization |
 | EfficientNet | Transfer learning using pretrained EfficientNet |
 | ResNet | Transfer learning using pretrained ResNet |
 | Optuna Tuned ResNet | Hyperparameter tuned ResNet model |
 
 ---
 
-## Training & Evaluation
+## 📊 Results
 
-The models were evaluated using:
-
-- Training Loss
-- Validation Loss
-- Validation Accuracy
-- Confusion Matrix
-- Classification Report
-
-Transfer learning models significantly outperformed custom CNN architectures due to the limited dataset size.
+- Transfer learning significantly outperformed baseline CNN models.
+- ResNet with hyperparameter tuning achieved the best validation accuracy.
+- Data augmentation improved model generalization and reduced overfitting.
 
 ---
 
-## Project Structure
-
-```text
-Car-Damage-Classification/
-│
-├── notebooks/
-│   └── Car_Damage_Prediction.ipynb
-│
-├── Streamlit App/
-│   ├── app.py
-│   ├── model_helper.py
-│   └── Model/
-│       └── saved_model.pth
-│
-├── FastAPI Server/
-│   └── server.py
-│
-├── requirements.txt
-└── README.md
-```
-
----
-
-## Streamlit Application
-
-The Streamlit application allows users to:
-
-- Upload car images
-- Run real-time damage classification
-- View prediction results instantly
-
-Run the Streamlit app:
-
-```bash
-python -m streamlit run app.py
-```
-
----
-
-## FastAPI Backend
-
-The FastAPI server exposes a prediction endpoint for model inference.
-
-Run the FastAPI server:
-
-```bash
-fastapi dev server.py
-```
-
-### API Endpoint
-
-```http
-POST /predict
-```
-
----
-
-## Results
-
-- Transfer learning achieved significantly better performance compared to baseline CNN models.
-- ResNet with hyperparameter tuning produced the best validation accuracy.
-- Data augmentation improved generalization and reduced overfitting.
-
----
-
-## Future Improvements
+## 🚀 Future Improvements
 
 - Train on a larger and more diverse dataset
 - Experiment with Vision Transformers (ViTs)
-- Apply advanced augmentation strategies
-- Deploy the application on cloud platforms
+- Apply advanced augmentation techniques
 - Extend the project to damage localization/object detection
+- Deploy on cloud platforms
 
 ---
 
-## Conclusion
+## ✅ Conclusion
 
-This project demonstrates the complete deep learning workflow for image classification:
+This project demonstrates an end-to-end deep learning workflow including:
 
 - Data preprocessing
 - CNN modeling
 - Transfer learning
 - Hyperparameter tuning
 - Model evaluation
-- API development
+- API integration
 - Frontend deployment
 
-The final system integrates PyTorch, FastAPI, and Streamlit to provide an end-to-end car damage classification solution.
+The final system integrates PyTorch, FastAPI, and Streamlit to provide real-time car damage classification.
 
 ---
 
-## Author
+## 👤 Author
 
 Elza
