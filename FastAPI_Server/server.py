@@ -14,4 +14,5 @@ async def get_prediction(file:UploadFile=File(...)):
         prediction=predict(image_path)
         return {"prediction":prediction} #Return result as JSON
     except Exception as e:
-        return {"error":str(e)}
+        print("PREDICTION ERROR:", str(e))
+        return {"error": str(e)}
