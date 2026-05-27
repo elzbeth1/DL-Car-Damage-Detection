@@ -3,7 +3,7 @@ import requests
 
 # When running locally, FastAPI runs on 8000
 # When deployed, replace with your actual FastAPI URL
-FASTAPI_URL = "http://localhost:8000/predict"
+FASTAPI_URL = "https://dl-car-damage-detection.onrender.com/predict"
 
 st.title("Vehicle Damage Detection")
 
