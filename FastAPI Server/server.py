@@ -12,6 +12,6 @@ async def get_prediction(file:UploadFile=File(...)):
         with open(image_path,"wb") as f:
             f.write(image_bytes)
         prediction=predict(image_path)
-        return {"prediction":prediction}
+        return {"prediction":prediction} #Return result as JSON
     except Exception as e:
         return {"error":str(e)}
