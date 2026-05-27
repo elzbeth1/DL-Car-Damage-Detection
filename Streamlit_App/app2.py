@@ -16,8 +16,11 @@ if uploaded_file:
         try:
             # Send image bytes directly to FastAPI — no need to save to disk
             files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "image/jpeg")}
-            response = requests.post(FASTAPI_URL, files=files,timeout=120)
 
+            st.write("Using backend URL:", FASTAPI_URL)
+            response = requests.post(FASTAPI_URL, files=files,timeout=120)
+            st.write("Status code:", response.status_code)
+            st.write("Response text:", response.text)
             if response.status_code == 200:
                 result = response.json()
                 if "prediction" in result:
@@ -29,3 +32,7 @@ if uploaded_file:
 
         except requests.exceptions.ConnectionError:
             st.error("Could not connect to the prediction server. Is FastAPI running?")
+
+        except Exception as e:
+
+            st.error(f"Frontend Exception: {str(e)}")
