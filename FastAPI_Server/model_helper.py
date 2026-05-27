@@ -17,7 +17,7 @@ MODEL_PATH = os.path.join(
 class CarClassifierResNet(nn.Module):
     def __init__(self,num_classes=6):
         super().__init__()
-        self.model=models.resnet50(weights="DEFAULT")
+        self.model=models.resnet50(weights=None)
 
         #Freeze all layers except final fully connected layer
         for param in self.model.parameters():
@@ -49,7 +49,7 @@ def predict(image_path):
 
     global trained_model
 
-    if not trained_model: #to avoid loading the model multiple times
+    if trained_model is None:#to avoid loading the model multiple times
         trained_model=CarClassifierResNet()
         trained_model.load_state_dict(torch.load(MODEL_PATH,map_location=torch.device('cpu')))  #Loading the saved model parameters to trained model variable
         trained_model.eval()
