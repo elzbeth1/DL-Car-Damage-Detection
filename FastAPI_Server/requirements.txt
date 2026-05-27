@@ -4,3 +4,4 @@ python-multipart
 Pillow==12.2.0
 torch==2.2.2
 torchvision==0.17.2
+
