@@ -2,9 +2,16 @@ from PIL import Image
 import torch
 from torch import nn
 from torchvision import models, transforms
+import os
 
 trained_model=None
 class_names=["Front Breakage","Front Crushed","Front Normal","Rear Breakage","Rear Crushed","Rear Normal"]
+MODEL_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "Model",
+    "saved_model.pth"
+)
 
 #load the pretrained resnet model
 class CarClassifierResNet(nn.Module):
@@ -44,7 +51,7 @@ def predict(image_path):
 
     if not trained_model: #to avoid loading the model multiple times
         trained_model=CarClassifierResNet()
-        trained_model.load_state_dict(torch.load("../Model/saved_model.pth",map_location=torch.device('cpu')))  #Loading the saved model parameters to trained model variable
+        trained_model.load_state_dict(torch.load(MODEL_PATH,map_location=torch.device('cpu')))  #Loading the saved model parameters to trained model variable
         trained_model.eval()
 
     with torch.no_grad():

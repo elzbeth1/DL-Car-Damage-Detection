@@ -16,7 +16,7 @@ if uploaded_file:
         try:
             # Send image bytes directly to FastAPI — no need to save to disk
             files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "image/jpeg")}
-            response = requests.post(FASTAPI_URL, files=files)
+            response = requests.post(FASTAPI_URL, files=files,timeout=120)
 
             if response.status_code == 200:
                 result = response.json()
