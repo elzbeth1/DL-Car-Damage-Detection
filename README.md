@@ -8,7 +8,7 @@ The project explores multiple deep learning approaches, compares their performan
 
 ## 🌐 Live Demo
 
-🔗 Streamlit App: https://dl-car-damage-detect.streamlit.app/
+🔗 Streamlit App: https://dl-car-damage-detection2.streamlit.app/
 
 ---
 
