@@ -2,7 +2,7 @@
 
 A deep learning-based image classification system for detecting and classifying car damage using CNNs and transfer learning models such as ResNet and EfficientNet.
 
-The project explores multiple deep learning approaches, compares their performance, and deploys the final trained model using Streamlit and FastAPI.
+The project explores multiple deep learning approaches, compares their performance, and deploys the final trained model using Streamlit. The project also includes an experimental FastAPI backend integration architecture for scalable model inference and deployment testing using Render.
 
 ---
 
@@ -20,7 +20,8 @@ The project explores multiple deep learning approaches, compares their performan
 - Hyperparameter tuning using Optuna
 - Model evaluation using confusion matrix and classification report
 - Streamlit frontend for real-time predictions
-- FastAPI backend for model inference
+- Experimental FastAPI backend integration for scalable inference
+- Backend deployment testing using Render
 
 ---
 
@@ -33,8 +34,9 @@ The project explores multiple deep learning approaches, compares their performan
 - Scikit-learn
 
 ### Deployment
-- Streamlit
-- FastAPI
+- Streamlit (standalone frontend deployment)
+- FastAPI (experimental backend API integration)
+- Render (backend deployment testing)
 
 ### Visualization
 - Matplotlib
@@ -101,7 +103,7 @@ This project demonstrates an end-to-end deep learning workflow including:
 - API integration
 - Frontend deployment
 
-The final system integrates PyTorch, FastAPI, and Streamlit to provide real-time car damage classification.
+The final system integrates PyTorch and Streamlit to provide real-time car damage classification. The project also explores a separate FastAPI backend architecture and Render deployment workflow for scalable inference serving.
 
 ---
 
